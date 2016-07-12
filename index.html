@@ -1,17 +1,28 @@
 <!DOCTYPE html>
-<html ng-app="gemStore">
+<html ng-app>
 <head>
-	<link rel="stylesheet" type="test/css" href="./stylesheets/bootstrap.min.css"/>
+	<!--<link rel="stylesheet" type="test/css" href="./stylesheets/bootstrap.min.css"/>-->
+	<script type="text/javascript" src="./scripts/angular.min.js"></script>
+	<script type="text/javascript">
+		function ExampleCtrl($scope){
+			$scope.value = "Lorem ipsum";
+		}
+	</script>
 <head>
-<body ng-controller="StoreController as store">
-	<div ng-repeat="product in store.products">
-		<h1>{{product.name}}</h1>
-		<h2>${{product.price}}</h2>
-		<p>{{product.description}}</p>
-		<button ng-show="product.canPurchase">Add to Cart</button>
+<body>
+<div>
+	<label>Name:</label>
+	<input type="text" placeholder="Enter a name here" ng-model='yourName'>
+	<hr>
+	<h1>Hello {{yourName}}!</h1>
+	<div>
+		<input ng-model="value"><br>
+		{{value}}
 	</div>
-<script type="text/javascript" src="./scripts/angular.min.js"></script>
-<script type="text/javascript" src="./scripts/app.js"></script>
-
+	<div>
+		<input ng-model="value"><br>
+		{{value}}
+	</div>
+</div>
 </body>
 </html>

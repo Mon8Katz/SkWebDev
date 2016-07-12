@@ -1,7 +1,17 @@
 (function(){
 	var app = angular.module('gemStore', []);
 	app.controller('StoreController', function(){
-		this.products = gems;
+		this.products = gems;			
+	});
+	
+	app.controller('TabController', function(){
+		this.tab = 1;
+		this.setTab = function(setTab){
+			this.tab = setTab;
+		};
+		this.isSet = function(checkTab){
+			return this.tab === checkTab; 
+		};
 	
 	});
 	
