@@ -1,8 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="gemStore">
 <head>
+	<link rel="stylesheet" type="test/css" href="./stylesheets/bootstrap.min.css"/>
 <head>
-<body>
-<h1>Hello Angular JS!</h1>
+<body ng-controller="StoreController as store">
+	<div ng-repeat="product in store.products">
+		<h1>{{product.name}}</h1>
+		<h2>${{product.price}}</h2>
+		<p>{{product.description}}</p>
+		<button ng-show="product.canPurchase">Add to Cart</button>
+	</div>
+<script type="text/javascript" src="./scripts/angular.min.js"></script>
+<script type="text/javascript" src="./scripts/app.js"></script>
+
 </body>
 </html>
